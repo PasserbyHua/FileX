@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp1.Views.BindServer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="绑定地址" Height="200" Width="400" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="绑定信息"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Content="确定" Margin="5" Width="40" Click="Button_Click"/>
+            <Button Content="取消" Margin="5" Width="40" Click="Button_Click_1"/>
+        </WrapPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="IP:"/>
+                <TextBox x:Name="IPText" Width="120"/>
+                <TextBlock Text="端口:"/>
+                <TextBox x:Name="PortText" Width="40" Text="12321" IsEnabled="False"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>
