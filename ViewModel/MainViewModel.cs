@@ -309,7 +309,7 @@ namespace WpfApp1.ViewModel
             RefreshWindowHelper.AddFileEvent += AddFileInfo;
         }
 
-        public void Close()
+        public void Close()//关闭所有服务
         {
             switch (status)
             {
